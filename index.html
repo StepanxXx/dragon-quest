@@ -19,8 +19,9 @@
       rel="stylesheet"
     />
 
-    <script type="module" crossorigin src="/dragon-quest/assets/main-B5Qt9EMX.js"></script>
-    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/styles-DwWdQFhu.css">
+    <script type="module" crossorigin src="/dragon-quest/assets/vendor-Bie5rgBU.js"></script>
+    <script type="module" crossorigin src="/dragon-quest/assets/main-BIlKOAjz.js"></script>
+    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/styles-CMt5pOHV.css">
   </head>
   <body>
     <header class="header">
@@ -44,7 +45,68 @@
 </header>
 
 
-    <main></main>
+    <main>
+      <section class="ye-dashboard container" data-ye-root>
+        <div class="ye-header">
+  <div class="ye-header__copy">
+    <p class="ye-header__eyebrow">Your Energy</p>
+    <h1 class="ye-header__title">Model-View-Controller Demo</h1>
+  </div>
+  <p class="ye-header__status" data-role="status">Ready</p>
+</div>
+
+
+        <div class="ye-actions">
+  <button type="button" class="ye-actions__button" data-action="reload-all">
+    Reload all
+  </button>
+  <button
+    type="button"
+    class="ye-actions__button"
+    data-action="reload-filters"
+  >
+    Reload filters
+  </button>
+  <button
+    type="button"
+    class="ye-actions__button"
+    data-action="reload-exercises"
+  >
+    Reload exercises
+  </button>
+  <button type="button" class="ye-actions__button" data-action="reload-quote">
+    Reload quote
+  </button>
+</div>
+
+
+        <div class="ye-grid">
+          <section class="ye-section ye-quote-card">
+  <h2 class="ye-section__title">Quote of the day</h2>
+  <div data-role="quote">No quote loaded yet.</div>
+</section>
+
+          <section class="ye-section ye-filters">
+  <h2 class="ye-section__title">Filters</h2>
+  <ul data-role="filters" class="ye-filters__list"></ul>
+</section>
+
+        </div>
+
+        <div class="ye-grid">
+          <section class="ye-section ye-exercises">
+  <h2 class="ye-section__title">Exercises</h2>
+  <ul data-role="exercises" class="ye-exercises__list"></ul>
+</section>
+
+          <section class="ye-section ye-details">
+  <h2 class="ye-section__title">Exercise details</h2>
+  <div data-role="details">Select an exercise to load details.</div>
+</section>
+
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
   <div class="container"></div>

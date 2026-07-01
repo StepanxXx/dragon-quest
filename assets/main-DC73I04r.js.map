@@ -1,1 +1,0 @@
-{"version":3,"file":"main-DC73I04r.js","sources":["../../src/main.ts"],"sourcesContent":["import { initRatingModal } from './components/rating-modal';\n\ninitRatingModal();\n"],"names":["initRatingModal"],"mappings":"0CAEAA,EAAgB"}

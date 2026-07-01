@@ -19,9 +19,9 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/dragon-quest/assets/vendor-Bie5rgBU.js"></script>
-    <script type="module" crossorigin src="/dragon-quest/assets/rating.controller-ClGWLR2I.js"></script>
-    <script type="module" crossorigin src="/dragon-quest/assets/main-CNLIpGmF.js"></script>
-    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/rating-Dg9yEKbT.css">
+    <script type="module" crossorigin src="/dragon-quest/assets/rating.controller-CP_Kq-ve.js"></script>
+    <script type="module" crossorigin src="/dragon-quest/assets/main-B0YxHSMa.js"></script>
+    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/rating-BtAEpLJp.css">
   </head>
   <body>
     <!-- #region Header -->
@@ -95,9 +95,9 @@
 <!-- #endregion Socials -->
 
     <button class="site-menu-button" type="button" aria-label="Open menu">
-      <span class="site-menu-button-line"></span>
-      <span class="site-menu-button-line"></span>
-      <span class="site-menu-button-line"></span>
+      <svg width="32" height="32" stroke="currentColor" fill="none">
+        <use href="/dragon-quest/assets/sprite-C2_uOjtx.svg#icon-burger-menu"></use>
+      </svg>
     </button>
   </div>
 </header>
@@ -211,7 +211,7 @@
 
   <div class="container exercises-content">
     <div class="exercises-sidebar"></div>
-    <div class="exercises-list" data-exercises-list></div>
+    <ul class="exercises-list" data-exercises-list></ul>
   </div>
 </section>
     </main>
@@ -371,5 +371,70 @@
   </svg>
 </div>
 
+    <!-- #region Burger Menu -->
+<div class="burger-menu" data-burger-modal>
+  <button class="burger-menu-close" type="button" aria-label="Close menu" data-modal-close>
+    <svg width="32" height="32" stroke="currentColor" fill="none">
+      <use href="/dragon-quest/assets/sprite-C2_uOjtx.svg#icon-menu-mobile-close"></use>
+    </svg>
+  </button>
+
+  <nav class="burger-menu-nav" aria-label="Mobile navigation">
+    <ul class="burger-menu-nav-list">
+      <li class="burger-menu-nav-item">
+        <a class="burger-menu-nav-link" href="./index.html">Home</a>
+      </li>
+      <li class="burger-menu-nav-item">
+        <a class="burger-menu-nav-link" href="./favorites.html">Favorites</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- #region Socials -->
+<ul class="social-list dark">
+  <li class="social-item">
+    <a
+      class="social-link"
+      href="https://www.facebook.com/goITclub/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <svg class="social-icon" width="28" height="28">
+        <use href="/dragon-quest/assets/sprite-C2_uOjtx.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-item">
+    <a
+      class="social-link"
+      href="https://www.instagram.com/goitclub/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <svg class="social-icon" width="28" height="28">
+        <use href="/dragon-quest/assets/sprite-C2_uOjtx.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-item">
+    <a
+      class="social-link"
+      href="https://www.youtube.com/goITclub/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+    >
+      <svg class="social-icon" width="28" height="28">
+        <use href="/dragon-quest/assets/sprite-C2_uOjtx.svg#icon-youtube"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+<!-- #endregion Socials -->
+
+</div>
+<!-- #endregion Burger Menu -->
   </body>
 </html>

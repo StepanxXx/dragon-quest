@@ -20,7 +20,7 @@
     />
     <script type="module" crossorigin src="/dragon-quest/test-components.js"></script>
     <link rel="modulepreload" crossorigin href="/dragon-quest/assets/vendor-Dt2AslCP.js">
-    <link rel="modulepreload" crossorigin href="/dragon-quest/assets/rating.controller-Bi4KEJIB.js">
+    <link rel="modulepreload" crossorigin href="/dragon-quest/assets/rating.controller-BBJrpByr.js">
     <link rel="stylesheet" crossorigin href="/dragon-quest/assets/vendor-CV79g7kv.css">
     <link rel="stylesheet" crossorigin href="/dragon-quest/assets/rating-DCCrG1jL.css">
   </head>
@@ -389,7 +389,12 @@
       Transforming your <em>body</em> shape with us
     </p>
 
-    <form class="subscribe-form" action="#" method="post">
+    <form
+      id="subscribe-form"
+      class="subscribe-form"
+      data-subscribe-form
+      novalidate
+    >
       <label class="subscribe-form-label" for="subscribe-email">
         Subscribe and learn about new exercises!
       </label>
@@ -399,8 +404,12 @@
         name="email"
         type="email"
         placeholder="Email"
+        autocomplete="email"
+        required
       />
-      <button class="btn light width-100-percent" type="submit">Send</button>
+      <button class="btn light width-100-percent" type="submit" disabled>
+        Send
+      </button>
     </form>
 
     <div class="site-footer-legal">

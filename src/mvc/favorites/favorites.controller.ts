@@ -11,6 +11,20 @@ export class FavoritesController {
     const favorites = this.model.getFavorites();
     if (!favorites || favorites.length === 0) {
       this.view.renderEmptyState();
+    } else {
+      this.view.bindDeleteWorkout(this.handleDelete);
     }
   }
+
+  private handleDelete = (id: string): void => {
+    const updatedFavorites = this.model.removeFavorite(id);
+
+    
+    this.view.removeCardFromDOM(id);
+
+    if (updatedFavorites.length === 0) {
+      this.view.renderEmptyState();
+    }
+  };
 }
+

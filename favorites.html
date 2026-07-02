@@ -28,11 +28,7 @@
     <!-- #region Header -->
 <header class="site-header">
   <div class="container site-header-container">
-    <a
-      class="site-header-logo"
-      href="./index.html"
-      aria-label="Your Energy home"
-    >
+    <a class="site-header-logo" href="./" aria-label="Your Energy home">
       <svg class="site-header-logo-icon" width="132" height="24">
         <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-logo-text"></use>
       </svg>
@@ -41,12 +37,12 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <ul class="site-nav-list">
         <li class="site-nav-item">
-          <a class="site-nav-link {=$active-home}" href="./index.html">
-            Home
-          </a>
+          <a class="site-nav-link {=$active-home}" href="./"> Home </a>
         </li>
         <li class="site-nav-item">
-          <a class="site-nav-link site-nav-link-active" href="./favorites.html">Favorites</a>
+          <a class="site-nav-link site-nav-link-active" href="./favorites.html"
+            >Favorites</a
+          >
         </li>
       </ul>
     </nav>
@@ -170,16 +166,11 @@
 
     </main>
 
-    
     <!-- #region Footer -->
 <footer class="site-footer">
   <div class="container site-footer-container">
     <div class="site-footer-brand">
-      <a
-        class="site-footer-logo"
-        href="./index.html"
-        aria-label="Your Energy home"
-      >
+      <a class="site-footer-logo" href="./" aria-label="Your Energy home">
         <svg class="site-footer-logo-icon" width="132" height="24">
           <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-logo-text"></use>
         </svg>
@@ -276,9 +267,20 @@
 </footer>
 <!-- #endregion Footer -->
 
+    <button type="button" class="scroll-up-btn" aria-label="Scroll to top">
+    <svg class="scroll-up-btn-icon" width="33" height="32">
+        <use xlink:href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-scroll-up"></use>
+    </svg>
+</button>
+
     <!-- #region Burger Menu -->
 <div class="burger-menu" data-burger-modal>
-  <button class="burger-menu-close" type="button" aria-label="Close menu" data-modal-close>
+  <button
+    class="burger-menu-close"
+    type="button"
+    aria-label="Close menu"
+    data-modal-close
+  >
     <svg width="32" height="32" stroke="currentColor" fill="none">
       <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-menu-mobile-close"></use>
     </svg>
@@ -287,7 +289,7 @@
   <nav class="burger-menu-nav" aria-label="Mobile navigation">
     <ul class="burger-menu-nav-list">
       <li class="burger-menu-nav-item">
-        <a class="burger-menu-nav-link" href="./index.html">Home</a>
+        <a class="burger-menu-nav-link" href="./">Home</a>
       </li>
       <li class="burger-menu-nav-item">
         <a class="burger-menu-nav-link" href="./favorites.html">Favorites</a>
@@ -341,6 +343,7 @@
 
 </div>
 <!-- #endregion Burger Menu -->
+
     <!-- #region Rating modal -->
 <div class="modal-overlay" data-rating-modal>
   <div class="modal rating-modal" role="dialog" aria-modal="true" aria-labelledby="rating-modal-title">

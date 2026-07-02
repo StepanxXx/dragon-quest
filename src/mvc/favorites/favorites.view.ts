@@ -12,11 +12,42 @@ export class FavoritesView {
 
   renderEmptyState(): void {
     this.root.classList.add('favor-exercises-noitems');
+    this.list.innerHTML = ''; 
 
     const text = document.createElement('p');
     text.className = 'favor-exercises-text';
     text.textContent = EMPTY_TEXT;
     this.list.append(text);
+  }
+
+  bindDeleteWorkout(handler: (id: string) => void): void {
+    this.list.addEventListener('click', (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+    
+      const deleteBtn = target.closest<HTMLButtonElement>('[data-action="delete"]');
+      if (!deleteBtn) return;
+
+      const card = deleteBtn.closest<HTMLDivElement>('.workout-card');
+      if (!card) return;
+
+
+      const workoutId = card.dataset.workoutId;
+      if (workoutId) {
+        handler(workoutId); 
+      }
+    });
+  }
+
+  removeCardFromDOM(id: string): void {
+    const card = this.list.querySelector(`[data-workout-id="${id}"]`);
+    if (card) {
+      const listItem = card.closest('li');
+      if (listItem) {
+        listItem.remove();
+      } else {
+        card.remove();
+      }
+    }
   }
 
   private getElement<T extends HTMLElement>(selector: string): T {
@@ -27,3 +58,4 @@ export class FavoritesView {
     return element;
   }
 }
+

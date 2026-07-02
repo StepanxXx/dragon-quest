@@ -22,4 +22,14 @@ export class FavoritesModel {
       return null;
     }
   }
+
+  removeFavorite(id: string): FavoriteExercise[] {
+    const currentFavorites = this.getFavorites() || [];
+    const updatedFavorites = currentFavorites.filter(exercise => exercise._id !== id);
+    
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedFavorites));
+    
+    return updatedFavorites;
+  }
 }
+

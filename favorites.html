@@ -19,10 +19,10 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/dragon-quest/assets/vendor-Dt2AslCP.js"></script>
-    <script type="module" crossorigin src="/dragon-quest/assets/rating.controller-Cb5_RzLn.js"></script>
-    <script type="module" crossorigin src="/dragon-quest/assets/main-KcXaUwba.js"></script>
+    <script type="module" crossorigin src="/dragon-quest/assets/rating.controller-_A3hPlTZ.js"></script>
+    <script type="module" crossorigin src="/dragon-quest/assets/main-DokgQDKw.js"></script>
+    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/rating-DvfYzE5h.css">
     <link rel="stylesheet" crossorigin href="/dragon-quest/assets/vendor-CV79g7kv.css">
-    <link rel="stylesheet" crossorigin href="/dragon-quest/assets/rating-Bp_TNGKk.css">
   </head>
   <body>
     <!-- #region Header -->
@@ -158,6 +158,66 @@
         </div>
         <div class="favor-exercises" data-favorites>
           <ul class="favor-exercises-list"></ul>
+
+          <template data-favorites-card-template>
+            <li class="favor-exercises-item">
+              <div class="workout-card" data-workout-id>
+                <div class="workout-header">
+                  <div class="workout-badge-wrap">
+                    <div class="workout-badge">Workout</div>
+                    <button
+                      class="workout-btn-delete"
+                      type="button"
+                      aria-label="Delete workout"
+                      data-action="delete"
+                    >
+                      <svg class="delete-icon" width="16" height="16">
+                        <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <button
+                    class="workout-btn-start"
+                    type="button"
+                    aria-label="Start "
+                    data-action="start"
+                    data-exercise-open
+                    data-exercise-id
+                  >
+                    Start
+                    <svg class="btn-icon" width="20" height="20">
+                      <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="workout-title-container">
+                  <div class="workout-icon-wrap">
+                    <svg class="workout-icon" width="16" height="16">
+                      <use href="/dragon-quest/assets/sprite-DF0rA6k1.svg#icon-running-stick-figure"></use>
+                    </svg>
+                  </div>
+                  <h3 class="workout-title"></h3>
+                </div>
+
+                <ul class="workout-info-list">
+                  <li class="workout-info-item">
+                    <span class="info-label">Burned calories:</span>
+                    <span class="info-value" data-exercise-burned-calories></span>
+                  </li>
+                  <li class="workout-info-item">
+                    <span class="info-label">Body part:</span>
+                    <span class="info-value" data-exercise-body-part></span>
+                  </li>
+                  <li class="workout-info-item">
+                    <span class="info-label">Target:</span>
+                    <span class="info-value" data-exercise-target></span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </template>
         </div>
         <ul class="pag-list"></ul>
       </div>

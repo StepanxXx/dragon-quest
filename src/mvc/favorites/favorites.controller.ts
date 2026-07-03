@@ -5,9 +5,11 @@ import {
   FavoritesModel,
 } from './favorites.model';
 import { FavoritesView } from './favorites.view';
+import { FavorInfoView } from './favor-info.view';
 
 export class FavoritesController {
   private readonly desktopQuery = window.matchMedia(TABLET_MEDIA_QUERY);
+  private favorInfoView: FavorInfoView | null = null;
 
   constructor(
     private model: FavoritesModel,
@@ -17,6 +19,7 @@ export class FavoritesController {
   init(): void {
     this.applyPageSize();
     this.render();
+    this.initFavorInfo();
 
     this.view.onDeleteClick(id => {
       this.model.removeFavorite(id);
@@ -35,6 +38,14 @@ export class FavoritesController {
       this.applyPageSize();
       this.render();
     });
+  }
+
+  private initFavorInfo(): void {
+    const favorInfoElement = document.querySelector<HTMLElement>('[data-favor-context]');
+    if (favorInfoElement) {
+      this.favorInfoView = new FavorInfoView(favorInfoElement);
+      this.favorInfoView.setContext('favorites');
+    }
   }
 
   private applyPageSize(): void {

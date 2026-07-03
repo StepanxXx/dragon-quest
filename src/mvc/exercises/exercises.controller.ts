@@ -6,9 +6,11 @@ import {
   ExercisesModel,
 } from './exercises.model';
 import { ExercisesView } from './exercises.view';
+import { FavorInfoView } from '../favorites/favor-info.view';
 
 export class ExercisesController {
   private readonly desktopQuery = window.matchMedia(TABLET_MEDIA_QUERY);
+  private favorInfoView: FavorInfoView | null = null;
 
   constructor(
     private readonly model: ExercisesModel,
@@ -19,14 +21,23 @@ export class ExercisesController {
     this.applyExercisesPerPage();
     this.view.renderExerciseCategories();
     this.bindEvents();
+    this.initFavorInfo();
 
     this.view.setActiveFilter(ExerciseFilter.MUSCLES);
     await this.loadCategories(ExerciseFilter.MUSCLES);
   }
 
+  private initFavorInfo(): void {
+    const favorInfoElement = document.querySelector<HTMLElement>('[data-favor-context]');
+    if (favorInfoElement) {
+      this.favorInfoView = new FavorInfoView(favorInfoElement);
+      this.favorInfoView.setContext('exercises');
+    }
+  }
+
   private applyExercisesPerPage(): void {
     this.model.setExercisesPerPage(
-      this.desktopQuery.matches ? EXERCISES_PER_PAGE : EXERCISES_PER_PAGE_MOBILE
+      this.desktopQuery.matches ? EXERCISES_PER_PAGE : EXERCISES_PER_PAGE_MOBILE,
     );
   }
 

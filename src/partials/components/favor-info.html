@@ -1,54 +1,32 @@
-<div class="favor-info {=$extra-class}">
+<div class="favor-info" data-favor-context="">
   <div class="favor-dailynorm" id="startTimerListItem">
     <div class="favor-dailynorm-icon">
       <svg width="20" height="20">
         <use href="./img/sprite.svg#icon-dumbbell"></use>
       </svg>
     </div>
-    <div class="content-wrapper">
-      <h3 class="dailynorm-value">110 min</h3>
-      <p class="dailynorm-caption">Daily norm of sports</p>
-      <p class="dailynorm-text">
-        The World Health Organization recommends at least 150 minutes of
-        moderate-intensity aerobic physical activity throughout the week for
-        adults aged 18-64. However, what happens if we adjust that number to 110
-        minutes every day? While it might seem like a high number to hit,
-        dedicating 110 minutes daily to sporting activities may offer
-        unparalleled benefits to physical health, mental well-being, and overall
-        quality of life.
-      </p>
-    </div>
+    <h3 id="timerValue">110 min</h3>
+    <p>Daily norm of sports</p>
   </div>
   <div class="favor-img-wrap">
     <picture>
       <source
         media="(min-width: 1440px)"
-        srcset="
-          ./img/favorites/{=$img-prefix}-info-widget-desktop.webp    1x,
-          ./img/favorites/{=$img-prefix}-info-widget-desktop@2x.webp 2x
-        "
-        type="image/webp"
+        data-desktop-src=""
+        data-desktop-src-2x=""
       />
       <source
         media="(min-width: 768px)"
-        srcset="
-          ./img/favorites/{=$img-prefix}-info-widget-tablet.webp    1x,
-          ./img/favorites/{=$img-prefix}-info-widget-tablet@2x.webp 2x
-        "
-        type="image/webp"
+        data-tablet-src=""
+        data-tablet-src-2x=""
       />
       <source
-        srcset="
-          ./img/favorites/{=$img-prefix}-info-widget-mobile.webp    1x,
-          ./img/favorites/{=$img-prefix}-info-widget-mobile@2x.webp 2x
-        "
-        type="image/webp"
+        data-mobile-src=""
+        data-mobile-src-2x=""
       />
       <img
-        src="./img/favorites/{=$img-prefix}-info-widget-mobile.webp"
+        src=""
         alt="Women sportswear working-out outdoor"
-        width="344"
-        height="141"
       />
     </picture>
   </div>

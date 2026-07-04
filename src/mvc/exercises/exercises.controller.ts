@@ -29,6 +29,7 @@ export class ExercisesController {
 
   private initFavorInfo(): void {
     const favorInfoElement = document.querySelector<HTMLElement>('[data-favor-context]');
+
     if (favorInfoElement) {
       this.favorInfoView = new FavorInfoView(favorInfoElement);
       this.favorInfoView.setContext('exercises');

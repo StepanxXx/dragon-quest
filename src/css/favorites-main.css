@@ -6,18 +6,23 @@ body {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-container {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-container {
+    display: flex;
+    gap: 32px;
     padding-top: 90px;
     padding-bottom: 50px;
   }
 }
+
 /**                          title */
 .favor-title {
   font-size: 28px;
@@ -26,6 +31,7 @@ body {
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-title {
     font-size: 44px;
@@ -33,43 +39,60 @@ body {
     margin-bottom: 32px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-title {
     margin-bottom: 44px;
   }
 }
-/**                          quote */
-@media screen and (min-width: 1440px) {
-  .favor-quote {
-    display: flex;
-    gap: 32px;
-  }
+
+.quote-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
 }
-.favor-quote-container {
-  display: flex;
-  gap: 18px;
-  width: 100%;
-  min-height: 159px;
-  border-radius: 20px;
-  background-color: var(--color-ink);
-  padding: 20px;
-  margin-bottom: 20px;
-}
+
 @media screen and (min-width: 768px) {
-  .favor-quote-container {
-    min-height: 220px;
-    gap: 16px;
-    padding: 40px;
-    margin-bottom: 16px;
+  .quote-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "item1 item1"
+    "item2 item3";
   }
 }
+
 @media screen and (min-width: 1440px) {
-  .favor-quote-container {
+  .quote-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "item1"
+    "item3"
+    "item2";
     gap: 16px;
-    width: 494px;
-    min-height: 230px;
   }
 }
+ @media screen and (min-width: 768px) {
+   .favor-container {
+     & .quote-day-container {
+       grid-area: item1;
+     }
+
+     & .favor-quote-daily-block {
+       grid-area: item3;
+     }
+
+     & .favor-info {
+       grid-area: item2;
+     }
+   }
+
+
+ }
+
+
 .favor-quote-icon {
   position: relative;
   background-color: rgba(244, 244, 244, 0.2);
@@ -78,28 +101,62 @@ body {
   height: 32px;
   border-radius: 50%;
 }
+
 .favor-quote-icon svg {
   position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
+  transform: translate(35%, 25%);
   fill: var(--color-light);
 }
+
 .favor-quote-wrap {
   position: relative;
-  min-width: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 206px;
+  min-width: 335px;
+  background-color: var(--color-ink);
 }
+
 @media screen and (min-width: 768px) {
   .favor-quote-wrap {
-    max-width: 574px;
-    min-width: 560px;
+    gap: 16px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-quote-wrap {
-    min-width: 360px;
+
   }
 }
+
+.favor-quote-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 243px;
+}
+
+@media screen and (min-width: 768px) {
+  .favor-quote-info {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+.favor-quote-title {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.quote-text {
+  margin-bottom: 8px;
+}
+
+
 .favor-quote-wrap h3 {
   margin-bottom: 6px;
   font-size: 20px;
@@ -107,30 +164,34 @@ body {
   font-weight: 500;
   color: var(--color-light);
 }
+
 @media screen and (min-width: 768px) {
   .favor-quote-wrap h3 {
     font-size: 24px;
     line-height: 1.33;
   }
 }
+
 .favor-quote-wrap p {
   font-size: 14px;
   line-height: 1.286;
   color: rgba(244, 244, 244, 0.6);
 }
+
 @media screen and (min-width: 768px) {
   .favor-quote-wrap p {
     margin-bottom: 18px;
   }
 }
+
 .favor-quote-wrap h4 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 18px;
   color: var(--color-light);
   margin-top: 16px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-quote-wrap h4 {
     display: block;
@@ -141,29 +202,38 @@ body {
     margin-top: 18px;
   }
 }
+
 .favor-quote-wrap svg {
-  position: absolute;
-  top: 0;
-  right: 0;
   fill: var(--color-light);
 }
+
 /**                          dailynorm */
+.favor-info {
+  background-color: #fff;
+  border-radius: 20px;
+  height: fit-content;
+}
+
 @media screen and (min-width: 768px) {
   .favor-info {
-    display: flex;
-    gap: 16px;
-    height: 141px;
-    margin-bottom: 0;
+    grid-area: item3;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .favor-info {
+  }
+}
+
 .favor-dailynorm {
-  display: flex;
-  gap: 18px;
   position: relative;
-  border-radius: 20px;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .favor-info.main .favor-dailynorm {
@@ -176,6 +246,7 @@ body {
     height: 32px;
     border-radius: 50%;
     background-color: var(--color-ink);
+
     svg {
       fill: var(--color-light);
     }
@@ -184,21 +255,26 @@ body {
 
 @media screen and (min-width: 768px) {
   .favor-dailynorm {
-    width: 344px;
-    padding: 40px;
-    margin-bottom: 0;
-    border-radius: 15px;
+    gap: 16px;
+    padding: 25px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .favor-dailynorm {
-    width: 239px;
+    width: 100%;
   }
 }
 
 .favor-dailynorm svg {
   fill: var(--color-ink);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
 }
 
 .dailynorm-value {
@@ -225,10 +301,10 @@ body {
   margin-top: 16px;
   font-size: 14px;
   line-height: 1.286;
+}
 
-  &.hidden {
-    display: none;
-  }
+.dailynorm-text.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -270,32 +346,46 @@ body {
   }
 }
 
-/**                          img */
 .favor-img-wrap {
+  max-height: 119px;
   border-radius: 20px;
   overflow: hidden;
 }
+
+.favor-img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .favor-info--favorites .favor-img-wrap {
+    height: 119px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .favor-img-wrap {
-    width: 344px;
-    /* height: 141px; */
-    min-height: stretch;
+    max-height: fit-content;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-img-wrap {
-    width: 239px;
+    max-height: fit-content;
   }
 }
+
 /**                          exercises */
 .favor-exercises {
   padding-top: 40px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-exercises {
     padding-top: 64px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-exercises {
     min-width: 850px;
@@ -303,20 +393,24 @@ body {
     padding-top: 0;
     overflow: auto;
   }
+
   .favor-exercises::-webkit-scrollbar {
     width: 8px;
   }
+
   .favor-exercises::-webkit-scrollbar-thumb {
     background-color: var(--color-ink);
     border-radius: 12px;
     border: none;
   }
 }
+
 .favor-exercises-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-exercises-list {
     flex-direction: row;
@@ -324,23 +418,29 @@ body {
     gap: 32px 16px;
   }
 }
+
 .favor-exercises-list p {
   text-align: center;
 }
+
 .favor-exercises-item {
   display: flex;
   width: 100%;
 }
+
 .favor-exercises-item .workout-card {
   width: 100%;
   min-width: 0;
 }
+
 .favor-exercises-item .workout-title-container {
   min-width: 0;
 }
+
 .favor-exercises-item .workout-icon-wrap {
   flex: 0 0 auto;
 }
+
 .favor-exercises-item .workout-title {
   min-width: 0;
   overflow: hidden;
@@ -348,19 +448,23 @@ body {
   user-select: none;
   white-space: nowrap;
 }
+
 .favor-exercises-item .workout-info-list {
   flex-wrap: nowrap;
   overflow: hidden;
 }
+
 .favor-exercises-item .workout-info-item {
   display: flex;
   min-width: 0;
   white-space: nowrap;
 }
+
 .favor-exercises-item .info-label {
   flex: 0 0 auto;
   white-space: nowrap;
 }
+
 .favor-exercises-item .info-value {
   min-width: 0;
   overflow: hidden;
@@ -368,24 +472,29 @@ body {
   user-select: none;
   white-space: nowrap;
 }
+
 @media screen and (min-width: 768px) {
   .favor-exercises-item {
     width: calc((100% - 16px) / 2);
   }
 }
+
 .favor-exercises-noitems {
   padding: 40px 8px 0 9px;
 }
+
 @media screen and (min-width: 768px) {
   .favor-exercises-noitems {
     padding: 132px 75px 0;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .favor-exercises-noitems {
     padding: 102px 148px 0;
   }
 }
+
 .favor-exercises-text {
   font-size: 18px;
   line-height: 1.33;

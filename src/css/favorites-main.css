@@ -3,14 +3,13 @@ body {
 }
 
 .favor-container {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 20px 0;
 }
 
 @media screen and (min-width: 768px) {
   .favor-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 32px;
+    padding-bottom: 64px;
   }
 }
 
@@ -29,14 +28,14 @@ body {
   font-weight: 400;
   line-height: 1.36;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-top: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .favor-title {
     font-size: 44px;
     line-height: 1.09;
-    margin-bottom: 32px;
+
   }
 }
 
@@ -65,33 +64,33 @@ body {
 
 @media screen and (min-width: 1440px) {
   .quote-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-    "item1"
-    "item3"
-    "item2";
-    gap: 16px;
+    height: fit-content;
+    min-width: 494px;
+    /*grid-template-columns: 1fr;*/
+    /*grid-template-rows: repeat(3, auto);*/
+    /*grid-template-areas:*/
+    /*"item1"*/
+    /*"item3"*/
+    /*"item2";*/
+    /*gap: 16px;*/
   }
 }
- @media screen and (min-width: 768px) {
-   .favor-container {
-     & .quote-day-container {
-       grid-area: item1;
-     }
 
-     & .favor-quote-daily-block {
-       grid-area: item3;
-     }
+@media screen and (min-width: 768px) {
+  .favor-container {
+    & .quote-day-container {
+      grid-area: item1;
+    }
 
-     & .favor-info {
-       grid-area: item2;
-     }
-   }
+    & .favor-quote-daily-block {
+      grid-area: item3;
+    }
 
-
- }
-
+    & .favor-info {
+      grid-area: item2;
+    }
+  }
+}
 
 .favor-quote-icon {
   position: relative;
@@ -117,18 +116,6 @@ body {
   background-color: var(--color-ink);
 }
 
-@media screen and (min-width: 768px) {
-  .favor-quote-wrap {
-    gap: 16px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .favor-quote-wrap {
-
-  }
-}
-
 .favor-quote-info {
   display: flex;
   flex-direction: column;
@@ -143,8 +130,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1440px) {
-}
 
 .favor-quote-title {
   display: flex;
@@ -220,11 +205,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .favor-info {
-  }
-}
-
 .favor-dailynorm {
   position: relative;
   display: flex;
@@ -281,7 +261,7 @@ body {
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 @media screen and (min-width: 768px) {
@@ -329,20 +309,6 @@ body {
   .favor-dailynorm {
     flex-direction: column;
     gap: 15px;
-  }
-
-  @media screen and (min-width: 768px) {
-    .favor-dailynorm {
-      padding: 25px;
-    }
-  }
-
-  .dailynorm-value {
-    margin-bottom: 6px;
-  }
-
-  .dailynorm-text {
-    display: none;
   }
 }
 

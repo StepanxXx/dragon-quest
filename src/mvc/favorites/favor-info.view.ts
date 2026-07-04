@@ -40,7 +40,6 @@ export class FavorInfoView {
     );
     const img = container.querySelector<HTMLImageElement>('img');
 
-    console.log({ desktop, tablet, mobile, img });
     desktop!.srcset = `${basePath}/women-outdoors.jpg 1x, ${basePath}/women-outdoors@2x.jpg 2x`;
     tablet!.srcset = `${basePath}/women-outdoors-tab.jpg 1x, ${basePath}/women-outdoors-tab@2x.jpg 2x`;
     mobile!.srcset = `${basePath}/women-outdoors-mob.jpg 1x, ${basePath}/women-outdoors-mob@2x.jpg 2x`;

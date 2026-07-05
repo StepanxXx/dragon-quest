@@ -66,13 +66,7 @@ body {
   .quote-container {
     height: fit-content;
     min-width: 494px;
-    /*grid-template-columns: 1fr;*/
-    /*grid-template-rows: repeat(3, auto);*/
-    /*grid-template-areas:*/
-    /*"item1"*/
-    /*"item3"*/
-    /*"item2";*/
-    /*gap: 16px;*/
+    max-width: 494px;
   }
 }
 
